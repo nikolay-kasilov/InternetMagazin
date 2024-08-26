@@ -4,7 +4,7 @@ services:
 
   postgres:
     image: postgres:15.1
-    container_name: db
+    container_name: magazin_db
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}

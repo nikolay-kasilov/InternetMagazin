@@ -47,7 +47,7 @@ class UserLoginView(LoginView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Home - Авторизация'
+        context['title'] = 'N_K - Авторизация'
         return context
 
 
@@ -72,7 +72,7 @@ class UserRegistrationView(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Home - Регистрация'
+        context['title'] = 'N_K - Регистрация'
         return context
 
 
@@ -94,7 +94,7 @@ class UserProfileView(LoginRequiredMixin, CacheMixin , UpdateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Home - Кабинет'
+        context['title'] = 'N_K - Кабинет'
 
         # Можно вынести сам запрос в отдельный метод этого класса контроллера
         orders = Order.objects.filter(user=self.request.user).prefetch_related(
@@ -113,7 +113,7 @@ class UserCartView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Home - Корзина'
+        context['title'] = 'N_K - Корзина'
         return context
 
 # def users_cart(request):

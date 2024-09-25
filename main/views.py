@@ -23,7 +23,7 @@ class AboutView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'N_K - О нас'
         context['content'] = "О нас"
-        context['text_on_page'] = "Мы интернет магазин по продаче мячей Mikasa."
+        context['text_on_page'] = "Мы интернет магазин по продаче мячей Mikasa и не только."
         return context
     
 

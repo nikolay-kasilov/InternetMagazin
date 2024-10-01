@@ -14,3 +14,16 @@ services:
       - ./datadase-magazin:/var/lib/postgesql/data
     ports:
       - "5432:5432"
+
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./media:/opt/app/media
+    ports:
+      - "80:80"
+

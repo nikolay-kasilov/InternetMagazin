@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'HOST': 'Magazin_db',
         'PORT': '5432',
     }
 }
